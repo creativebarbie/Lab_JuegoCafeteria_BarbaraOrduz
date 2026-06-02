@@ -262,26 +262,85 @@ body{
 }
 
 
-/* RESPONSIVE MÓVIL */
+@media (max-width: 768px) {
 
-@media(max-width:480px){
+    .scene-container {
 
-    .dialog-container{
+        height: auto !important;
+        min-height: auto !important;
 
-        padding:18px;
+        display: block !important;
+
+        overflow: visible !important;
     }
 
-    #dialog-text{
+    #scene-image {
 
-        font-size:16px;
+        width: 100% !important;
+
+        height: auto !important;
+
+        max-height: 40vh !important;
+
+        object-fit: contain !important;
+
+        display: block;
+    }
+
+    .dialog-container {
+
+        position: relative !important;
+
+        bottom: auto !important;
+
+        left: auto !important;
+
+        transform: none !important;
+
+        width: 95% !important;
+
+        margin: 10px auto;
+
+        padding: 15px;
+    }
+
+    .choices-container {
+
+        position: relative !important;
+
+        bottom: auto !important;
+
+        left: auto !important;
+
+        transform: none !important;
+
+        width: 95% !important;
+
+        margin: 10px auto 20px auto;
+    }
+
+    #dialog-text {
+
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .character-name {
+
+        font-size: 20px;
+    }
+
+    .choice-btn {
+
+        width: 100%;
+        font-size: 16px;
+        padding: 12px;
     }
 
     .timer-box,
-    .drama-box{
+    .drama-box {
 
-        font-size:14px;
-
-        padding:8px 12px;
+        font-size: 14px;
+        padding: 8px 12px;
     }
-
 }
