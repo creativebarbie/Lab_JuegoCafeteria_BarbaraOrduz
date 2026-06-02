@@ -337,10 +337,20 @@ body{
         padding: 12px;
     }
 
-    .timer-box,
-    .drama-box {
+    .game-header{
 
-        font-size: 14px;
-        padding: 8px 12px;
+        padding: 2px 5px;
+        top: -9px;
     }
+
+    .timer-box,
+    .drama-box{
+
+        font-size: 11px;
+
+        padding: 4px 8px;
+
+        border-radius: 6px;
+    }
+
 }
