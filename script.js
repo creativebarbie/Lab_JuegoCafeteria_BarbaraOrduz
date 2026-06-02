@@ -13,6 +13,10 @@ document.getElementById("timer");
 const dramaElement =
 document.getElementById("drama");
 
+const bgMusic = document.getElementById("bgMusic");
+
+console.log("Audio:", bgMusic);
+
 // VARIABLES DEL JUEGO
 
 let drama = 0;
@@ -24,6 +28,8 @@ let escenaActual = null;
 let dialogoActual = 0;
 
 let temporizador;
+
+let musicaIniciada = false;
 
 // ACTUALIZAR DRAMA
 
@@ -40,6 +46,17 @@ function actualizarDrama() {
         mostrarEscena(
             escenas.reinaDrama
         );
+
+        if (!musicaIniciada) {
+
+    bgMusic.volume = 0.3;
+
+    bgMusic.play().catch(error => {
+        console.log("Error al reproducir música:", error);
+    });
+
+    musicaIniciada = true;
+}
 
         return;
     }
@@ -219,6 +236,15 @@ document
     .addEventListener(
         "click",
         () => {
+
+            mostrarEscena(escenas.inicio);
+
+            document.addEventListener("click", () => {
+
+            bgMusic.volume = 0.3;
+            bgMusic.play();
+
+}, { once: true });
 
             iniciarTemporizador();
 
